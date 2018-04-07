@@ -6,34 +6,96 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <title>王镇佳的笔记本</title>
-  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/docute.css">
+  <link rel="stylesheet" href="./lib/docute.css">
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 </head>
 
 <body>
   <div id="app"></div>
-  <script src="https://unpkg.com/docute@3/dist/docute.js"></script>
+  <script src="./lib/docute.js"></script>
   <script>
-    docute.init({
-      sidebar: false,
-      nav: [
+    var aFragmentItems = [
       {
-        title: '碎片学习',
-        path: '/fragment',
-        type: 'dropdown',
-        items: [
-          {
-            title: '百度云分享密码',
-            path: '/fragment/baiduyun',
-            source: '/fragment/baiduyun.md'
-          },
-          {
-            title: 'https证书申请',
-            path: '/fragment/https-keys',
-            source: '/fragment/https-keys.md'
-          }
-        ]
-      }
+        title: 'webhook配置',
+        path: '/fragment/web-hook',
+        source: '/fragment/web-hook.md'
+      },
+      {
+        title: '数据结构面试题',
+        path: '/fragment/datastruct',
+        source: '/fragment/datastruct.md'
+      },    
+      {
+        title: '红包生成器',
+        path: '/fragment/red-packet-generator',
+        source: '/fragment/red-packet-generator.md'
+      },         
+      {
+        title: 'git特殊操作',
+        path: '/fragment/git',
+        source: '/fragment/git.md'
+      },    
+      {
+        title: '洗牌算法',
+        path: '/fragment/shuffle',
+        source: '/fragment/shuffle.md'
+      },
+      {
+        title: '3月末于厦门',
+        path: '/fragment/thinking-20180331',
+        source: '/fragment/thinking-20180331.md'
+      }         
+    ];
+    var aWebItems = [
+      {
+        title: '前端面试总结',
+        path: '/web/web-interview',
+        source: '/web/web-interview.md'
+      },  
+    ];
+    var aToolItems = [
+      {
+        title: '百度云分享密码',
+        path: '/tool/baiduyun',
+        source: '/tool/baiduyun.md'
+      },
+      {
+        title: 'https证书申请',
+        path: '/tool/https-keys',
+        source: '/tool/https-keys.md'
+      },
+      {
+        title: 'ssh免密登录',
+        path: '/tool/ssh-none-pw',
+        source: '/tool/ssh-none-pw.md'
+      },      
+    ];
+    docute.init({
+      // sidebar: false,
+      nav: [
+        {
+          title: '首页',
+          path: '/',
+          source: 'README.md'
+        },
+        {
+          title: 'web学习',
+          path: 'web',
+          type: 'dropdown',
+          items: aWebItems
+        },
+        {
+          title: '工具',
+          path: 'tool',
+          type: 'dropdown',
+          items: aToolItems
+        },
+        {
+          title: '碎片学习',
+          path: '/fragment',
+          type: 'dropdown',
+          items: aFragmentItems
+        },        
       ]
     });
   </script>
