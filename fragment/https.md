@@ -4,7 +4,7 @@
 2. 等待证书颁发，并下载。
 3. 选择用nginx做https
 
-示例nginx配置
+以配置nginx为例
 ```nginx
 server {
   listen 443;
