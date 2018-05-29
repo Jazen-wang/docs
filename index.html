@@ -75,6 +75,13 @@
         source: '/tool/ssh-none-pw.md'
       },      
     ];
+    var aDiaryItems = [
+      {
+        title: '20180529',
+        path: '/diary/20180529',
+        source: '/diary/20180529.md'
+      }
+    ];    
     docute.init({
       // sidebar: false,
       nav: [
@@ -100,7 +107,13 @@
           path: '/fragment',
           type: 'dropdown',
           items: aFragmentItems
-        },        
+        },  
+        {
+          title: '日记',
+          path: '/diary',
+          type: 'dropdown',
+          items: aDiaryItems
+        },           
       ]
     });
   </script>
